@@ -5,24 +5,30 @@ css_id: faq
 
 ### Frequently Asked Questions
 
-1. Can you combine Timestamp and Snapshot?
+1. How difficult is it to integrate TUF?
 
-2. What happens when you have to revoke a key?
+2. Has there been a software or security audit of TUF?
 
-3. Can I use the same keys for different roles?
+3. Can TUF be used with weaker hardware, such as medical devices?
 
-4. How can I experiment with TUF?
+4. Can you combine Timestamp and Snapshot?
 
-5. Can I use an online key to sign the Targets role?
+5. What happens when you have to revoke a key?
 
-6. What's the point of having the Root and Snapshot roles?
+6. Can I use the same keys for different roles?
 
-7. Is there a presentation or video about TUF?
+7. How can I experiment with TUF?
 
-8. How often should role metadata expire?
+8. Can I use an online key to sign the Targets role?
 
-9. How do you recover from a repository attack?
+9. What's the point of having the Root and Snapshot roles?
 
-10. What happens if a key is compromised?
+10. Is there a presentation or video about TUF?
 
-11. Why should we use delegations?
+11. How often should role metadata expire?
+
+12. How do you recover from a repository attack?
+
+13. What happens if a key is compromised?
+
+14. Why should we use delegations?
