@@ -19,6 +19,7 @@ css_id: faq
   operations or has limited memory, it can delegate verification of hashes and
   signatures to another device.  For instance, a weaker device can rely on
   another device on the network to verify the signatures on top-level metadata.
+  Delegating to another device is not built into the framework but
   [Uptane](https://uptane.github.io/), a variant of TUF, is designed to work
   with weaker devices like the Electronic Control Units found in automobiles.
 
