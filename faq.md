@@ -7,17 +7,20 @@ css_id: faq
 
 **1. How difficult is it to integrate TUF?**
 
+
 **2. Has there been a security audit of TUF?**
   The [Security Audits](https://theupdateframework.github.io/audits.html) page
-  lists a few of the security assessments that have been publicly conducted by
-  others, such as the NCC group.  Papers on TUF have been reviewed by security
-  experts in academia, and published to security conferences like USENIX ATC,
-  NSDI, and CCS.
+  links to a few of the security audits done by the NCC group.  A security
+  audit by [Cure53](https://cure53.de/) is anticipated in June 2018.
 
-**3. Can TUF be used with weaker hardware?**
-  At a minimum, the client must be able to verify hashes and signatures on
-  metadata.  [Uptane](https://uptane.github.io/), a variant of TUF, is designed
-  to work with the Electronic Control Units found in automobiles.
+**3. Can TUF be used with weaker devices?**
+  At a minimum, a client device must verify the hashes and signatures on
+  metadata.  If a device isn't powerful enough to perform cryptographic
+  operations or has limited memory, it can delegate verification of hashes and
+  signatures to another device.  For instance, a weaker device can rely on
+  another device on the network to verify the signatures on top-level metadata.
+  [Uptane](https://uptane.github.io/), a variant of TUF, is designed to work
+  with weaker devices like the Electronic Control Units found in automobiles.
 
 **4. Can you combine Timestamp and Snapshot?**
   There are a few reasons why the timestamp.json and snapshot.json files are
@@ -40,9 +43,9 @@ css_id: faq
 **7. How can I try TUF?**
    The [Getting
    Started](https://github.com/theupdateframework/tuf/blob/develop/docs/GETTING_STARTED.rst)
-   page contains instructions on how to install and run TUF.  The CLI and
-   client tools can be used to quickly create TUF repositories and experiment
-   with software updates.
+   page contains instructions to install and run the reference implemention.
+   The client and repo tools can be used to quickly create TUF repositories and
+   experiment with software updates.
 
 **8. Can I use an online key to sign the Targets role?**
 
@@ -54,4 +57,4 @@ css_id: faq
 
 **11. How often should metadata expire?**
 
-**14. Why should I use delegations?**
+**12. Why should I use delegations?**
