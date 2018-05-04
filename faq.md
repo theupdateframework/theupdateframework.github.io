@@ -14,13 +14,14 @@ css_id: faq
   experts in academia, and published to security conferences like USENIX ATC,
   NSDI, and CCS.
 
-**3. Can TUF be used with weaker hardware, such as medical devices?**
-  Yes.  [Uptane](https://uptane.github.io/), a variant of TUF, is designed to
-  work with the Electronic Control Units found in automobiles.
+**3. Can TUF be used with weaker hardware?**
+  At a minimum, the client must be able to verify hashes and signatures on
+  metadata.  [Uptane](https://uptane.github.io/), a variant of TUF, is designed
+  to work with the Electronic Control Units found in automobiles.
 
 **4. Can you combine Timestamp and Snapshot?**
   There are a few reasons why the timestamp.json and snapshot.json files are
-  not combined.
+  not combined:
 
   * The timestamp.json file is downloaded very frequently and so should be kept
   as small as possible, especially considering that the snapshot.json file
@@ -32,7 +33,7 @@ css_id: faq
 
   * Timestamp.json may be given to mirrors.
 
-**5. What happens if a TUF repo is compromised?**
+**5. What happens if the server and keys are compromised?**
 
 **6. Can I use the same keys for different roles?**
 
@@ -51,8 +52,6 @@ css_id: faq
   The [Videos](https://theupdateframework.github.io/videos.html) page contains
   links to presentations that have been given by us and adopters.
 
-**11. How often should role metadata expire?**
-
-**12. How do you recover from a repository attack?**
+**11. How often should metadata expire?**
 
 **14. Why should I use delegations?**
