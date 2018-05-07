@@ -6,11 +6,20 @@ css_id: faq
 ### Frequently Asked Questions
 
 **1. How difficult is it to integrate TUF?**
+  At a high level, an adopter only needs to (1) add TUF metadata to its
+  software repository and (2) arrange for clients to use a TUF library to fetch
+  files from the repository.
 
+  In practice, (1) will also require management of the keys needed to sign TUF
+  metadata, code to periodically update and re-sign metadata, and the initial
+  task of deciding how to organize the metadata and delegations available to
+  clients.  For (2), the adopter has to figure out how to ship the initial Root
+  file, andn implement TUF in their language of choice if one of the existing
+  implementations is insufficient.
 
 **2. Has there been a security audit of TUF?**
   The [Security Audits](https://theupdateframework.github.io/audits.html) page
-  links to a few of the security audits done by the NCC group.  A security
+  links to a few of the security audits provided by the NCC group.  A security
   audit by [Cure53](https://cure53.de/) is anticipated in June 2018.
 
 **3. Can TUF be used with weaker devices?**
@@ -86,8 +95,8 @@ css_id: faq
 **11. How often should metadata expire?**
   The Timestamp and Snapshot metadata should normally have a short expiration
   (1 day), whereas the Root and Targets metadata should expire less often (1
-  year).  A good rule of thumb: metadata should expire sooner the more often it
-  changes.
+  year).  A good rule of thumb is that metadata should expire sooner the more
+  often it changes.
 
 **12. Why should I use delegations?**
   As we state in the specification: "Delegated roles can further delegate trust
