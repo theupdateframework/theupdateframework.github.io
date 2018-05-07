@@ -65,6 +65,13 @@ css_id: faq
   the event of a repo compromise.
 
 **9. What's the point of having the Root and Snapshot roles?**
+  The Root role keeps track of the trusted public keys of the top-level roles,
+  removing or adding keys when needed.  Its metadata is rarely updated and its
+  signing keys protected the most.  In contrast, the Snapshot role is updated
+  often, signed with an online key, and provides a consistent view of the
+  metadata available on a repo.  The Snapshot and Root role are responsible for
+  different tasks that differ in level of importance.  Responsibility
+  separation is one of TUF's design choices.
 
 **10. Is there a presentation or video about TUF?**
   The [Videos](https://theupdateframework.github.io/videos.html) page contains
@@ -77,3 +84,12 @@ css_id: faq
   changes.
 
 **12. Why should I use delegations?**
+  As we state in the specification: "Delegated roles can further delegate trust
+  to other delegated roles. This provides for multiple levels of trust
+  delegation where each role can delegate full or partial trust for the target
+  files they are trusted for."  You should use delegations because they provide
+  more security.  For instance, in a community repository like PyPI, delegating
+  trust of target files to a project developer is recommended to achieve
+  compromise resilience.  An attacker cannot serve malicious files for the
+  developer's project because they don't have access to the developer's project
+  keys.
