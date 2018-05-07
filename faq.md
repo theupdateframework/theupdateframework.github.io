@@ -14,7 +14,7 @@ css_id: faq
   audit by [Cure53](https://cure53.de/) is anticipated in June 2018.
 
 **3. Can TUF be used with weaker devices?**
-  At a minimum, a client device must verify the hashes and signatures on
+  At a minimum, a client device must verify the hashes and signatures on TUF
   metadata.  If a device isn't powerful enough to perform cryptographic
   operations or has limited memory, it can delegate verification of hashes and
   signatures to another device.  For instance, a weaker device can rely on
@@ -38,6 +38,16 @@ css_id: faq
   * Timestamp.json may be given to mirrors.
 
 **5. What happens if the server and keys are compromised?**
+  The repo maintainer must revoke and replace compromised keys.  If a
+  Timestamp, Snapshot, Targets, or Root key is compromised, the Root role must
+  re-sign its metadata to replace the compromised key.  If a threshold of Root
+  keys are compromised, the Root file must be re-issued out of band.  It is
+  advised that a threshold number of offline keys be used to make a full
+  compromise of the repo unlikely.  For a more in-depth discussion on the steps
+  to follow in the event of a key compromise, see [PEP
+  458](https://www.python.org/dev/peps/pep-0458/#in-the-event-of-a-key-compromise),
+  which covers one way to deal with compromised keys on a community repo such
+  as PyPI.
 
 **6. Can I use the same keys for different roles?**
 
@@ -48,7 +58,11 @@ css_id: faq
    The client and repo tools can be used to quickly create TUF repositories and
    experiment with software updates.
 
-**8. Can I use an online key to sign the Targets role?**
+**8. Which roles can use online keys?**
+  The Timestamp and Snapshot roles can use online keys to facilitate continuous
+  delivery of updates on the typically repository.  All other roles should rely
+  on offline keys to prevent attackers from signing for malicious packages in
+  the event of a repo compromise.
 
 **9. What's the point of having the Root and Snapshot roles?**
 
@@ -57,5 +71,9 @@ css_id: faq
   links to presentations that have been given by us and adopters.
 
 **11. How often should metadata expire?**
+  The Timestamp and Snapshot metadata should normally have a short expiration
+  (1 day), whereas the Root and Targets metadata should expire less often (1
+  year).  A good rule of thumb: metadata should expire sooner the more often it
+  changes.
 
 **12. Why should I use delegations?**
