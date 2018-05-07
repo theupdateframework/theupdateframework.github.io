@@ -50,6 +50,12 @@ css_id: faq
   as PyPI.
 
 **6. Can I use the same keys for different roles?**
+  In general, you shouldn't share keys.  In certain cases, even sharing online
+  keys (e.g., between the Timestamp and Snapshot roles) is not advised.  As we
+  recommend for the PyPI community, "different keys for online roles allow for
+  each of the keys to be placed on separate servers if need be, and prevents
+  side channel attacks that compromise one key from automatically compromising
+  the rest of the keys."
 
 **7. How can I try TUF?**
    The [Getting
