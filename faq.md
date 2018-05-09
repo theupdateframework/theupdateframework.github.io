@@ -6,6 +6,7 @@ css_id: faq
 ### Frequently Asked Questions ###
 
 **1. How difficult is it to integrate TUF?**
+
   At a high level, all an adopter needs to do is (1) add TUF metadata to its
   software repository, and (2) arrange for clients to use TUF to fetch files
   from the repository before transferring the verified files to the software
@@ -19,6 +20,7 @@ css_id: faq
   implementations is insufficient.
 
 **2. Why should I use delegations?**
+
   As we state in the specification: "Delegated roles can further delegate trust
   to other delegated roles. This provides for multiple levels of trust
   delegation where each role can delegate full or partial trust for the target
@@ -29,6 +31,7 @@ css_id: faq
   them, and therefore cannot sign and serve malicious versions of the project.
 
 **3. What happens if the server and keys are compromised?**
+
   The repo maintainer must revoke and replace compromised keys. If a Timestamp,
   Snapshot, Targets, or Root key is compromised, the Root role must re-sign its
   metadata to replace the compromised key. If a threshold of Root keys is
@@ -41,6 +44,7 @@ css_id: faq
   as PyPI.
 
 **4. Can I use the same keys for different roles?**
+
   In general, you shouldn't share keys. In certain cases, even sharing online
   keys (e.g., between the Timestamp and Snapshot roles) is not advised. As we
   recommend for the PyPI community, "different keys for online roles allow for
@@ -49,12 +53,14 @@ css_id: faq
   the rest of the keys."
 
 **5. Which roles can use online keys?**
+
   The Timestamp and Snapshot roles can use online keys to facilitate continuous
   delivery of updates on the typical repository. All other roles should rely on
   offline keys to prevent attackers from signing for malicious packages in the
   event of a repo compromise.
 
 **6. What is the point of having the Root and Snapshot roles?**
+
   The Root role keeps track of the trusted public keys of the top-level roles,
   and can remove or add keys when needed. Its metadata is rarely updated and
   its signing keys must receive the greatest protection. In contrast, the
@@ -64,6 +70,7 @@ css_id: faq
   Separation of responsibilities is one of TUF's design choices.
 
 **7. Can you combine Timestamp and Snapshot?**
+
   There are a few reasons why the Timestamp and Snapshot files are not
   combined:
 
@@ -78,12 +85,14 @@ css_id: faq
   * Timestamp may be given to mirrors.
 
 **8. How often should metadata expire?**
+
   The Timestamp and Snapshot metadata should normally have a short expiration
   (1 day), whereas the Root and Targets metadata should expire less often (1
   year). A good rule of thumb is the more often the metadata changes, the
   sooner it should expire.
 
 **9. Are there ways to reduce bandwidth costs?**
+
   It is possible to minimize the size and number of delegated metadata that the
   client has to download, and in doing so, reduce the associated costs. The
   [Metadata Scalability
@@ -100,6 +109,7 @@ css_id: faq
 
 **10. Can TUF be used with devices that lack the CPU power or memory to
   verify metadata?**
+
   At a minimum, a client device must be able to verify the hashes and
   signatures on TUF metadata. If a device isn't powerful enough to perform
   cryptographic operations or has limited memory, it can delegate verification
@@ -110,17 +120,20 @@ css_id: faq
   with weaker devices like the Electronic Control Units found in automobiles.
 
 **11. Can I use TUF to download files from more than one repository?**
+
   TUF can download files from multiple mirrors and repos.  In fact, we offer
   guidance for conducting a secure search for files across multiple
   repositories in [TAP
   4](https://github.com/theupdateframework/taps/blob/master/tap4.md).
 
 **12. Has there been a security audit of TUF?**
+
   The [Security Audits](https://theupdateframework.github.io/audits.html) page
   links to a few of the security audits provided by the NCC group. A security
   audit by [Cure53](https://cure53.de/) is anticipated in June 2018.
 
 **13. How can I try TUF?**
+
   The [Getting
   Started](https://github.com/theupdateframework/tuf/blob/develop/docs/GETTING_STARTED.rst)
   page contains instructions to install and run the reference implementation.
@@ -128,6 +141,7 @@ css_id: faq
   experiment with software updates.
 
 **14. Is there a presentation or video about TUF?**
+
   The [Videos](https://theupdateframework.github.io/videos.html) page contains
   links to presentations that have been given by both TUF developer personnel,
   as well as adopters.
