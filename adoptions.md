@@ -21,6 +21,9 @@ rel="ATS logo"><img src="/assets/images/ats_logo.png" width="200"></a>
 href="https://github.com/theupdateframework/notary"
 rel="Notary logo"><img src="/assets/images/notary_logo.png"
 width="200"></a> 
+<a href="https://console.bluemix.net/docs/services/Registry/registry_trusted_content.html#registry_trustedcontent"
+rel="IBM logo"><img src="/assets/images/ibm_logo.jpg"
+width="200"></a>
 <a href="https://docs.microsoft.com/en-us/azure/container-registry/container-registry-content-trust"
 rel="Microsoft Azure logo"><img src="/assets/images/azure_logo.jpg"
 width="200"></a>
