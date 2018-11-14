@@ -52,7 +52,9 @@ width="200"></a>
 <a href="https://www.airbiquity.com/news/press-releases/airbiquity-unveils-new-otamatictm-release-further-strengthening-over-air-ota-software-and-data-management-offering-automotive"
 rel="Airbiquity logo"><img src="/assets/images/airbiquity.png"
 width="200"></a>
-
+<a href="https://github.com/goharbor/harbor/blob/master/docs/use_notary.md"
+rel="Harbor logo"><img src="/assets/images/harbor_logo.png"
+width="200"></a>
 
 ### Ongoing
 -----------
