@@ -33,14 +33,6 @@ of the project roles used below.
 
 **Maintainers**:
 
-  *Vladimir Diaz*
-
-    Email: vladimir.diaz@nyu.edu
-
-    GitHub username: @vladimir-v-diaz
-
-    PGP fingerprint: 3E87 BB33 9378 BC7B 3DD0  E5B2 5DEE 9B97 B0E2 289A
-
   *Sebastien Awwad*
 
     Email: sebastien.awwad@nyu.edu
