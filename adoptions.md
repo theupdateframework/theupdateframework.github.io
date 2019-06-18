@@ -30,10 +30,9 @@ width="200"></a>
 <a href="https://advancedtelematic.com/en/press-releases/ats-is-integrating-the-uptane-security-framework-for-over-the-air-software-updates-to-connected-vehicles.html"
 rel="ATS logo"><img src="/assets/images/ats_logo.png" width="200"></a>
 
-<a
-href="https://leap.se/en/2014/darkest-night"
-rel="LEAP logo"><img src="/assets/images/leap_logo.png"
-width="200"></a> 
+<a href="https://www.datadoghq.com/blog/engineering/secure-publication-of-datadog-agent-integrations-with-tuf-and-in-toto/"
+rel="Datadog logo"><img src="/assets/images/datadog_logo.png"
+width="200"></a>
 <a href="https://flynn.io/docs/development#the-update-framework-%28tuf%29" rel="Flynn logo"><img src="/assets/images/flynn_logo.png" width="200"></a> 
 <a
 href="https://www.youtube.com/watch?v=ofXHmfOTLyA"
@@ -58,9 +57,10 @@ width="200"></a>
 rel="Harbor logo"><img src="/assets/images/harbor_logo.png"
 width="200"></a>
 
-<a href="https://www.datadoghq.com/blog/engineering/secure-publication-of-datadog-agent-integrations-with-tuf-and-in-toto/"
-rel="Datadog logo"><img src="/assets/images/datadog_logo.png"
-width="200"></a>
+<a
+href="https://leap.se/en/2014/darkest-night"
+rel="LEAP logo"><img src="/assets/images/leap_logo.png"
+width="200"></a> 
 
 ### Ongoing
 -----------
