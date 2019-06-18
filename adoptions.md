@@ -56,6 +56,10 @@ width="200"></a>
 rel="Harbor logo"><img src="/assets/images/harbor_logo.png"
 width="200"></a>
 
+<a href="https://www.datadoghq.com/blog/engineering/secure-publication-of-datadog-agent-integrations-with-tuf-and-in-toto/"
+rel="Datadog logo"><img src="/assets/images/datadog_logo.png"
+width="200"></a>
+
 ### Ongoing
 -----------
 
