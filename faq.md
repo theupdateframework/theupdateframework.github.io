@@ -14,19 +14,23 @@ css_id: faq
 
   In practice, (1) will also require the adopter to decide how to make the
   metadata and delegations available to clients, how to manage the keys needed
-  to sign TUF metadata, and how to periodically update and re-sign metadata.
+  to sign TUF metadata (in particular, how to generate, securely store or backup, 
+  and rotate offline keys), and how to periodically update and re-sign metadata.
+
   For (2), an adopter has to figure out how to ship the initial Root file, and
-  implement TUF in their language of choice if one of the existing
-  implementations is insufficient.
+  implement [the TUF download and verification workflow](https://github.com/theupdateframework/specification/blob/master/tuf-spec.md#5-detailed-workflows) in their language of choice if one of the existing
+  implementations is insufficient.  
 
 **2. Why should I use delegations?**
 
+  Using delegations makes it so that users can perform actions for one another 
+  without needing to share keys in order to make this happen.
   As we state in the specification: "Delegated roles can further delegate trust
   to other delegated roles. This provides for multiple levels of trust
   delegation where each role can delegate full or partial trust for the target
   files they are trusted for."  Delegations add more security. For instance, in
   a community repository like PyPI, delegating trust for target files to a
-  project developer is recommended.  It increases compromise resilience because
+  project developer is recommended.  It increases compromise-resilience because
   if the developers control their own project keys, an attacker cannot access
   them, and therefore cannot sign and serve malicious versions of the project.
 
@@ -79,9 +83,17 @@ css_id: faq
   grow proportionally with the number of delegated target roles.
 
   * As the Timestamp role’s key is an online key and thus at high risk,
-  separate keys should be used for signing the Snapshot file so that the
-  Snapshot role’s keys can be kept offline, and thus more secure.
+  when an offline key storage is appropriate for Snapshot, separate keys should 
+  be used so that the Snapshot role’s keys can be kept offline, and thus in a
+  more secure manner.
 
+  * When rotating keys, it makes much more sense to rotate Timestamp frequently.  
+  When Timestamp is rotated, if an attacker compromises the new key, they can 
+  launch a freeze attack for a short while.  For Snapshot, an attacker could cause 
+  clients to invalidate a lot of their stored targets metadata, which may result in 
+  re-retrieval of a substantial amount of information from the repository.  So, it 
+  is recommended to rotate Timestamp more often.
+  
   * Timestamp may be given to mirrors.
 
 **8. How often should metadata expire?**
@@ -129,8 +141,7 @@ css_id: faq
 **12. Has there been a security audit of TUF?**
 
   The [Security Audits](https://theupdateframework.github.io/audits.html) page
-  links to a few of the security audits provided by the NCC group. A security
-  audit by [Cure53](https://cure53.de/) is anticipated in June 2018.
+  links to a few of the security audits of TUF.
 
 **13. How can I try TUF?**
 
