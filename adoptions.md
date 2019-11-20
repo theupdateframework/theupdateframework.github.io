@@ -10,6 +10,13 @@ By clicking on the images below, you will be linked either to articles that
 cover the TUF adoption, presentations on the adoption, or to repositories
 containing the relevant code.
 
+<a
+href="https://github.com/awslabs/tough"
+rel="AWS Labs logo"><img src="/assets/images/amazon_logo.png"
+width="200"></a>
+<a href="https://fuchsia.dev/"
+rel="Google Fuchsia logo"><img src="/assets/images/google_logo.png"
+width="200"></a>
 
 <a
 href="https://github.com/theupdateframework/notary"
