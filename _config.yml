@@ -6,3 +6,5 @@ description: A framework for securing software update systems
 logo_url: /assets/images/logo.svg
 google_analytics: false
 exclude: ["LICENSE", "README.md"]
+plugins:
+  - jekyll-redirect-from
